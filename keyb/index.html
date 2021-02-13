@@ -424,17 +424,10 @@
    
 </SCRIPT></HEAD>
 
- <BODY onload="init()">
+ <BODY>
 
-  <input type="text"  autocomplete="given-name" placeholder="First" title="First">
-<P style="font-family:Tahoma;font-size:14px">Virtual keyboard test #6: changing target input field (anonymous, no ID) on the fly.<BR>
-    <SMALL>Text is streamed to the field last focused.</SMALL></P>
-  
-    <INPUT type="text" size="40" onkeyup="getCaretPositions(this);" onclick="getCaretPositions(this);"></INPUT><BR><BR>
-    <INPUT type="text" size="40" onkeyup="getCaretPositions(this);" onclick="getCaretPositions(this);"></INPUT><BR><BR>
-    <TEXTAREA type="text" rows="15" cols="34" onkeyup="getCaretPositions(this);" onclick="getCaretPositions(this);"></TEXTAREA><BR><BR>
-  
-    <DIV id="keyboard"></DIV>
+
+    
   
   
 
@@ -442,6 +435,7 @@
   <SCRIPT>
     
     window.addEventListener("load", function() {
+      init()
       VKeyboard.prototype._handle_lang_item();
       var intervalID = window.setInterval(register_text_fields, 500)
     });
@@ -451,6 +445,6 @@
     <script src="https://www.cognitoforms.com/s/kDcH2fE-FEiTSXtGuZO59w"></script>
     <script>Cognito.load("forms", { id: "1" });</script>
   </div>
-  
+  <DIV id="keyboard"></DIV>
   
 </BODY></HTML>
