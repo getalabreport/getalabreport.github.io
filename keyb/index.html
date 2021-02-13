@@ -356,21 +356,24 @@
 </SCRIPT></HEAD>
 
  <BODY>
-  <P style="font-family:Tahoma;font-size:14px">Virtual keyboard test #2: advanced callback function.<BR><SMALL>Allows insertion/deletion of character(s) in the middle of the text.</SMALL></P>
+
+  <div class="cognito">
+    <script src="https://www.cognitoforms.com/s/kDcH2fE-FEiTSXtGuZO59w"></script>
+    <script>Cognito.load("forms", { id: "1" });</script>
+  </div>
+  <TEXTAREA onkeyup="getCaretPositions(this);" onclick="getCaretPositions(this);" id="textfield" rows="12" cols="50" overflow="auto"></TEXTAREA>
+  <P><A href="javascript:keyb_change()" onclick="javascript:blur()" id="switch" style="font-family:Tahoma;font-size:14px;text-decoration:none;border-bottom: 1px dashed #0000F0;color:#0000F0">Show Hebrew keyboard</A></P>
 
 
-    <TEXTAREA onkeyup="getCaretPositions(this);" onclick="getCaretPositions(this);" id="textfield" rows="12" cols="50" overflow="auto"></TEXTAREA>
-    <P><A href="javascript:keyb_change()" onclick="javascript:blur()" id="switch" style="font-family:Tahoma;font-size:14px;text-decoration:none;border-bottom: 1px dashed #0000F0;color:#0000F0">Show Hebrew keyboard</A></P>
 
-
-
-  <A id="switch"></A>
 
   <DIV id="keyboard"></DIV>
-
   <DIV id="k"></DIV>
+  
+  
   <SCRIPT>
-    // keyb_change();
+    keyb_change();
     VKeyboard.prototype._handle_lang_item();
+    keyb_change();
   </SCRIPT>
 </BODY></HTML>
