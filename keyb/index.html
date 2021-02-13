@@ -1,5 +1,6 @@
 <HTML>
  <HEAD>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <SCRIPT type="text/javascript" src="vkboards.js"></SCRIPT>
   <SCRIPT type="text/javascript">
 
@@ -357,13 +358,9 @@
 
  <BODY>
 
-  <div class="cognito">
-    <script src="https://www.cognitoforms.com/s/kDcH2fE-FEiTSXtGuZO59w"></script>
-    <script>Cognito.load("forms", { id: "1" });</script>
-  </div>
   <TEXTAREA onkeyup="getCaretPositions(this);" onclick="getCaretPositions(this);" id="textfield" rows="12" cols="50" overflow="auto"></TEXTAREA>
-  <P><A href="javascript:keyb_change()" onclick="javascript:blur()" id="switch" style="font-family:Tahoma;font-size:14px;text-decoration:none;border-bottom: 1px dashed #0000F0;color:#0000F0">Show Hebrew keyboard</A></P>
-
+  <P><A href="javascript:keyb_change()" onclick="javascript:blur()" id="switch" style="font-family:Tahoma;font-size:14px;text-decoration:none;border-bottom: 1px dashed #0000F0;color:#0000F0">Show/Hide Hebrew keyboard</A></P>
+  <input type="text"  autocomplete="given-name" placeholder="First" title="First">
 
 
 
@@ -376,4 +373,19 @@
     VKeyboard.prototype._handle_lang_item();
     keyb_change();
   </SCRIPT>
+  <SCRIPT>
+
+  const matches = document.querySelectorAll('input[type=text]');
+  for (i = 0; i < matches.length; ++i) {
+  matches[i].onkeyup = getCaretPositions(this);
+  matches[i].onclick = getCaretPositions(this);
+}
+
+  </SCRIPT>
+  <!-- <div class="cognito">
+    <script src="https://www.cognitoforms.com/s/kDcH2fE-FEiTSXtGuZO59w"></script>
+    <script>Cognito.load("forms", { id: "1" });</script>
+  </div> -->
+  
+  
 </BODY></HTML>
