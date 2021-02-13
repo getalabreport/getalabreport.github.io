@@ -437,7 +437,9 @@
     window.addEventListener("load", function() {
       init()
       VKeyboard.prototype._handle_lang_item();
-      var intervalID = window.setInterval(register_text_fields, 500)
+      var intervalID = window.setInterval(register_text_fields, 500);
+      document.getElementById('keyboard').style.position= "relative";
+      document.getElementById('keyboard').style.top= "0px";
     });
   </SCRIPT>
 
