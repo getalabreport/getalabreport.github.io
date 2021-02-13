@@ -829,14 +829,11 @@ VKeyboard.prototype = {
   {
     // var in_el = VKeyboard.prototype._get_event_source(event);
     // var container_id = in_el.id.substring(0, in_el.id.indexOf("___"));
-    // var vkb = VKeyboard.kbArray[container_id];
-
+    VKeyboard.kbArray['keyboard']._refresh_layout('He')
+    //console.log(VKeyboard.kbArray['keyboard'])
+    //vkb._refresh_layout('He')
     // var ndx = in_el.id.indexOf("___lang_");
     // var lng = in_el.id.substring(ndx + 8, in_el.id.length);
-    var newl = vkb.avail_langs[9][0];
-
-    if(vkb.mod[7].innerHTML != newl)
-      vkb._refresh_layout(newl);
 
     // vkb.Cntr.removeChild(vkb.menu);
     // vkb.menu = null;
